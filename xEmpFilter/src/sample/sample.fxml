@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <!--Add Button-->
+                <Button id="add_button" fx:id="add_button" layoutX="350.0" layoutY="408.0" mnemonicParsing="false" onMouseClicked="#add_layout" prefHeight="26.0" prefWidth="100.0" text="Insert" textAlignment="CENTER" />
+                <!--Search Button-->
+                <Button id="search_button" fx:id="search_button" layoutX="350.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#search_layout" prefHeight="26.0" prefWidth="100.0" text="Search" textAlignment="CENTER" />
+                <!--Main Logo-->
+                <ImageView fitHeight="154.0" fitWidth="144.0" layoutX="328.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/Icons/app_icon.png" />
+                    </image>
+                </ImageView>
+
+                <!--Social Media Icons-->
+                <ImageView id="fb_icon" fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="561.0" onMouseClicked="#openFacebook" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/Icons/Social/facebook.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="fb_icon" fitHeight="25.0" fitWidth="25.0" layoutX="42.0" layoutY="561.0" onMouseClicked="#openLinkedin" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/Icons/Social/linkedin.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="fb_icon" fitHeight="25.0" fitWidth="25.0" layoutX="71.0" layoutY="561.0" onMouseClicked="#openGithub" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/Icons/Social/github.png" />
+                    </image>
+                </ImageView>
+                <ImageView id="fb_icon" fitHeight="25.0" fitWidth="25.0" layoutX="99.0" layoutY="561.0" onMouseClicked="#openAskfm" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/Icons/Social/askfm.png" />
+                    </image>
+                </ImageView>
+
+            </children>
+        </Pane>
+
+
+    </children>
+</GridPane>

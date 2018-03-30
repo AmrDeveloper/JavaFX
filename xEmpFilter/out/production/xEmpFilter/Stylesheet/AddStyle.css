@@ -1,0 +1,28 @@
+/*Add Interface Style*/
+.root{
+    /*Merge two color in background*/
+    -fx-background-color: linear-gradient(#f2f2f2,#cccccc);
+    -fx-font-size: 11px;
+
+}
+
+#data_add{
+    -fx-background-color:
+            #3c7fb1,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #d9f0fc 50%, #bee6fd 50%, #a7d9f5 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: black;
+}
+
+
+#data_add:hover{
+    -fx-background-color:
+            #FF8F00,
+            linear-gradient(#fafdfe, #e8f5fc),
+            linear-gradient(#eaf6fd 0%, #FFF3E0 49%, #FFCC80 50%, #FFB74D 100%);
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 3,2,1;
+    -fx-text-fill: black;
+}

@@ -1,0 +1,39 @@
+/* Root Style*/
+.root {
+
+}
+
+/* Checkbox Style */
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: grey;
+    -fx-border-radius: 2px;
+}
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+.check-box:selected .box {
+    -fx-background-color: #28a3f4;
+}
+
+
+/* Button Style */
+.button {
+    -fx-background-color: #a6b5c9,
+    linear-gradient(#303842 0%, #3e5577 20%, #375074 100%),
+    linear-gradient(#768aa5 0%, #849cbb 5%, #5877a2 50%, #486a9a 51%, #4a6c9b 100%);
+    -fx-background-insets: 0 0 -1 0, 0, 1;
+    -fx-background-radius: 5, 5, 4;
+    -fx-text-fill: #242d35;
+    -fx-font-family: "Helvetica";
+    -fx-text-fill: white;
+}
+.button-toolbar {
+    -fx-background-color: linear-gradient(#98a8bd 0%, #8195af 25%, #6d86a4 100%);
+}
+.button Text {
+    -fx-effect: dropshadow(one-pass-box, rgba(0, 0, 0, 0.8), 0, 0.0, 0, -1);
+}
+.button:hover{
+    -fx-background-color: #3e5577;
+}

@@ -1,2 +1,3 @@
 # JavaFX
-My JavaFx Project
+
+My Desktop projects using JavaFX

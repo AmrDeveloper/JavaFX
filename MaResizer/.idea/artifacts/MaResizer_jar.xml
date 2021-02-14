@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MaResizer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MaResizer_jar</output-path>
+    <root id="archive" name="MaResizer.jar">
+      <element id="module-output" name="MaResizer" />
+    </root>
+  </artifact>
+</component>

@@ -35,13 +35,12 @@ public class ImageResizer {
     private void oneImageResizing(boolean[] mMultiSize, String[] allImagesPath , File image) {
         try {
             BufferedImage originalImage = ImageIO.read(image);
-            int type = (originalImage.getType() == 0) ? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
             final int sizesLength = 7;
             for (int i = 0; i < sizesLength; i++) {
                 //If User not need this resize continue to next size
                 if (mMultiSize[i]) {
                     int currentSize = Constants.mSizeArray[i];
-                    BufferedImage resizeImageJpg = imageBufferedResize(originalImage, type, currentSize, currentSize);
+                    BufferedImage resizeImageJpg = imageBufferedResize(originalImage, currentSize, currentSize);
                     String resultImagePath = allImagesPath[i] + "\\" +  imageNameParser(image.getName()) + "." + Constants.JPG;
                     boolean isCreated = ImageIO.write(resizeImageJpg, Constants.JPG, new File(resultImagePath));
                 }
@@ -54,16 +53,17 @@ public class ImageResizer {
     }
 
     private BufferedImage imageBufferedResize(BufferedImage originalImage,
-                                              int imageType,
-                                              int imageWigth,
+                                              int imageWidth,
                                               int imageHeight) {
-
-        BufferedImage resizedImage = new BufferedImage(imageWigth, imageHeight, imageType);
-        Graphics2D graphics2D = resizedImage.createGraphics();
-        graphics2D.drawImage(originalImage, 0, 0, imageWigth, imageHeight, null);
-        graphics2D.setBackground(Color.white);
+        final BufferedImage bufferedImage = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_RGB);
+        final Graphics2D graphics2D = bufferedImage.createGraphics();
+        graphics2D.setComposite(AlphaComposite.Src);
+        graphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION,RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        graphics2D.setRenderingHint(RenderingHints.KEY_RENDERING,RenderingHints.VALUE_RENDER_QUALITY);
+        graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_ON);
+        graphics2D.drawImage(originalImage, 0, 0, imageWidth, imageHeight, null);
         graphics2D.dispose();
-        return resizedImage;
+        return bufferedImage;
     }
 
     private String imageNameParser(String fullName){

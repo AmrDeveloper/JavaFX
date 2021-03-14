@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import java.net.URL?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" minHeight="200.0" minWidth="295.0" prefHeight="604.0" prefWidth="855.0"
+            styleClass="background" xmlns="http://javafx.com/javafx/2.2">
+    <stylesheets>
+        <URL value="@../application.css"/>
+    </stylesheets>
+</BorderPane>
